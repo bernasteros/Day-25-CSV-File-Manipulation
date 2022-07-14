@@ -11,5 +11,9 @@ print(data_dict)
 temp_list = data["temp"].to_list()
 print(temp_list)
 
-average_temp = sum(temp_list)/len(temp_list)
-print(f"The average temperature is {round(average_temp,2)}°C")
+average_temp = data["temp"].mean()
+median_temp = data["temp"].median()
+max_temp = data["temp"].max()
+print(f"The average temperature is {round(average_temp,2)}°C\n"
+      f"The median is {median_temp}°C\n"
+      f"The maximum temperature is {max_temp}°C")
