@@ -1,7 +1,12 @@
-import csv
+import pandas
 
-with open("./weather_data.csv", mode="r") as data_file:
-    data = csv.reader(data_file)
+# Simply read the file with pandas
+data = pandas.read_csv("weather_data.csv")
 
-    for row in data:
-        print(row)
+# Cool feature: convert the csv into other types (e.g. python-readable dict)
+data_dict = data.to_dict()
+print(data_dict)
+
+# Cherry-Picking: extract a list for a specific element
+temp_list = data["temp"].to_list()
+print(temp_list)
