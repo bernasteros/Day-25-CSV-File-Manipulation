@@ -17,6 +17,7 @@ data_dict = {
 
 output_data = pandas.DataFrame(data_dict)
 print(output_data)
+output_data.to_csv("squirrel_colors.csv")
 
 # # Simply read the file with pandas
 # data = pandas.read_csv("weather_data.csv")
